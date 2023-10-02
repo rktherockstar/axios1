@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Appointment App</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Assume you have an appointment object
+        const appointment = {
+            date: "2023-10-01",
+            time: "10:00 AM",
+            patientName: "John Doe",
+            doctorName: "Dr. Smith",
+        };
+
+        // Make a POST request using Axios
+        axios.post('https://crudcrud.com/api/YOUR_CRUDCRUD_API_KEY/appointments', appointment)
+            .then(response => {
+                console.log('POST success:', response.data);
+                // Check Crud Crud resource to see if the request was successful
+                // You can view the data at https://crudcrud.com/api/YOUR_CRUDCRUD_API_KEY/appointments
+            })
+            .catch(error => {
+                console.error('POST error:', error);
+            });
+    </script>
+</body>
+</html>
